@@ -1,0 +1,25 @@
+.logo {
+    background: lightblue url("logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 360px;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+}
+
+.bg-color-name-title {
+    background-color: #b7adad;
+    height:360px;
+}
+
+.heading {
+    height:360px;
+    
+}
+
+.xAxisLabel {
+    padding-top: 20px;
+}
+
