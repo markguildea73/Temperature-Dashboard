@@ -27,11 +27,11 @@ function makeGraphs(error, data) {
         .width(700)
         .margins({ top: 10, right: 10, bottom: 20, left: 40 })
         .x(d3.time.scale().domain([minDate,maxDate]))
-        .elasticX(true)
+        .yAxisPadding(10)
         .brushOn(false)
         .xAxisLabel("Date")
         .yAxisLabel("Temperature")
         .dimension(ndxDimension)
-        .group(ndxtemp3);
+        .group(ndxtemp);
     lineGraph.render();
 }
