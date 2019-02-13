@@ -16,6 +16,8 @@ function makeGraphs(error, data) {
         var ndxtemp1 = ndxDimension.group().reduceSum((d) => d["temp1"]);
         var ndxtemp2 = ndxDimension.group().reduceSum((d) => d["temp2"]);
         var ndxtemp3 = ndxDimension.group().reduceSum((d) => d["temp3"]);
+        
+        
     
     
         var minDate = ndxDimension.bottom(1)[0].date;
@@ -32,6 +34,7 @@ function makeGraphs(error, data) {
         .xAxisLabel("Date")
         .yAxisLabel("Temperature")
         .dimension(ndxDimension)
-        .group(ndxtemp);
+        .group(ndxtemp1),
+ 
     lineGraph.render();
 }
