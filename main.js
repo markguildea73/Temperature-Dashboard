@@ -17,7 +17,7 @@
         var temp1Data = date_dim.group().reduceSum(dc.pluck("temp1"));
         var temp2Data = date_dim.group().reduceSum(dc.pluck("temp2"));
         var temp3Data = date_dim.group().reduceSum(dc.pluck("temp3"));
-        var compositeChart = dc.compositeChart('#composite-chart');
+        var compositeChart = dc.compositeChart('#chart-here');
         
         console.log(temp1Data)
         
@@ -29,16 +29,18 @@
             .yAxisLabel("Spend")
             .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
             .renderHorizontalGridLines(true)
+            .elasticX(false)
+            .yAxisPadding(5)
             .compose([
                 dc.lineChart(compositeChart)
                     .colors('green')
-                    .group(temp1Data),
+                    .group(temp1Data, "temp1"),
                 dc.lineChart(compositeChart)
                     .colors('red')
-                    .group(temp2Data),
+                    .group(temp2Data, "temp2"),
                 dc.lineChart(compositeChart)
                     .colors('blue')
-                    .group(temp3Data),
+                    .group(temp3Data, "temp3"),
             ])
             .brushOn(false)
             .render()
