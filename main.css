@@ -1,9 +1,9 @@
 .logo {
     background: lightblue url("logo.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 360px;
+    background-position: left;
+    background-repeat: cover;
+    background-size: 200px,200px;
+    min-height: 150px;
     transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
@@ -11,7 +11,7 @@
 
 .bg-color-name-title {
     background-color: #b7adad;
-    height:360px;
+    height:150px;
 }
 
 .heading {
